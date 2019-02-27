@@ -1,27 +1,14 @@
+import { Navigation } from 'react-native-navigation';
+import { Provider } from 'react-redux';
 
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import LandingScreen from './src/screens/landingScreen/landingScreen';
 
-import Icon from 'react-native-vector-icons/Ionicons';
+import configureStore from './src/store/configureStore';
+import startApp from './src/startApp';
 
-type Props = {};
-export default class App extends Component<Props> {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Icons</Text>
-        <Icon size={30} name='ios-trash' color='red' />
-        <Icon size={30} name='md-send' color='green' />
-      </View>
-    );
-  }
-}
+const store = configureStore();
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-});
+Navigation.registerComponent('bcwallet.LandingScreen', () => LandingScreen, store, Provider);
+
+
+startApp();
