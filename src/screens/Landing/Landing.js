@@ -6,15 +6,18 @@ class LandingScreen extends Component {
       super(props);
    }
 
-   clickHandler = () => {
-      alert('working...');
+   createWalletHandler = () => {
+      this.props.navigator.push({
+         screen: 'bcwallet.CreatePhraseScreen',
+         title: 'Create Phrase'
+      });
    }
 
    render() {
       return (
          <View style={{flex: 1}}>
-            <Text>Landing screen</Text>
-            <Button title='Mock Btn' onPress={this.clickHandler}/>
+            <Text style={{fontSize: 32, textAlign:'center'}}>Obsnetwork</Text>
+            <Button title='Create Wallet' onPress={this.createWalletHandler}/>
          </View>
       );
     }
