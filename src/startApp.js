@@ -16,6 +16,10 @@ const startApp = () => {
             screen: 'bcwallet.LandingScreen',
             label: 'Obsnetwork',
             title: 'Obsnetwork'
+          },
+          appStyle: {
+             navBarTitleTextCentered: true,
+             navBarBackgroundColor: '#0cb'
           }     
       });
   });
