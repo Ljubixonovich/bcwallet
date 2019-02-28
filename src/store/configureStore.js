@@ -1,8 +1,9 @@
 import { createStore, combineReducers, compose } from 'redux';
 
+import uiReducer from './reducers/ui';
 
 const rootReducer = combineReducers({
-  
+  ui: uiReducer
 });
 
 let composeEnhancers = compose;
