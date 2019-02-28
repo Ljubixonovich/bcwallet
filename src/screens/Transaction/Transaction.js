@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Text, StyleSheet, View } from 'react-native';
+import ScrollableTabView, { ScrollableTabBar } from 'react-native-scrollable-tab-view';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 import mockIcon from '../../diamond.png';
@@ -35,9 +36,15 @@ class TransactionScreen extends Component {
 
    render() {
       return (
-         <View>
-            <Text> Transaction Screen </Text>
-         </View>
+
+         <ScrollableTabView
+            initialPage={1}
+            renderTabBar={() => <ScrollableTabBar />}
+         >
+            <View tabLabel='Send' style={{flex:1, backgroundColor: 'red'}}><Text>Tab 1</Text></View>
+            <View tabLabel='Balance' style={{flex:1, backgroundColor: 'green'}}><Text>Tab 2</Text></View>
+            <View tabLabel='Recive' style={{flex:1, backgroundColor: 'blue'}}><Text>Tab 3</Text></View>
+         </ScrollableTabView>
       )
    }
 }
