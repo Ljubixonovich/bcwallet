@@ -2,25 +2,26 @@ import React, { Component } from 'react';
 import { Text, StyleSheet, View } from 'react-native';
 import ScrollableTabView, { ScrollableTabBar } from 'react-native-scrollable-tab-view';
 
-import Icon from 'react-native-vector-icons/Ionicons';
-import mockIcon from '../../diamond.png';
+import Icons from 'react-native-vector-icons/Ionicons';
+import Recive from './Recive';
+import Balance from './Balance';
+import Send from './Send';
 
 
-class TransactionScreen extends Component {
-   // Navigation
-   static navigatorButtons = {
-      rightButtons: [
-         {
-            titile: 'messages',
-            id: 'messages',
-            icon: mockIcon
-         }
-      ]
-   };
-
+class TransactionScreen extends Component { 
    constructor(props) {
       super(props);
       this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent);
+   }
+
+   componentDidMount() {
+      Icons.getImageSource('md-chatboxes', 30, 'orange').then((sources) => {
+         this.props.navigator.setButtons({
+            rightButtons: [
+                { id: 'messages', icon: sources }
+            ]
+        });
+     });
    }
 
    onNavigatorEvent = (event) => {
@@ -34,16 +35,36 @@ class TransactionScreen extends Component {
       }
    }
 
+   tabChangeHandler = (arg) => {
+      if (arg === 0) { 
+         console.log('First Tab clicked');
+      } else if (arg === 1) { 
+         console.log('Second Tab clicked');
+      } else if (arg === 2) {
+         console.log('Third Tab clicked');
+      }
+   }
+
    render() {
       return (
 
          <ScrollableTabView
-            initialPage={1}
-            renderTabBar={() => <ScrollableTabBar />}
+            initialPage={1} 
+            renderTabBar={() => <ScrollableTabBar style={{backgroundColor:'#0cb'}} />}
+            prerenderingSiblingsNumber={Infinity}
+            onChangeTab={(arg) => this.tabChangeHandler(arg.i)}
          >
-            <View tabLabel='Send' style={{flex:1, backgroundColor: 'red'}}><Text>Tab 1</Text></View>
-            <View tabLabel='Balance' style={{flex:1, backgroundColor: 'green'}}><Text>Tab 2</Text></View>
-            <View tabLabel='Recive' style={{flex:1, backgroundColor: 'blue'}}><Text>Tab 3</Text></View>
+            <View tabLabel='Send' style={{flex:1}}>
+               <Send />
+            </View>
+           
+            <View tabLabel='Balance' style={{flex:1}}>
+               <Balance />
+            </View>
+
+            <View tabLabel='Recive' style={{flex:1}}>
+               <Recive />
+            </View>
          </ScrollableTabView>
       )
    }
