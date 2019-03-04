@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Text, StyleSheet, View } from 'react-native';
 import ScrollableTabView, { ScrollableTabBar } from 'react-native-scrollable-tab-view';
-
 import Icons from 'react-native-vector-icons/Ionicons';
+
 import Recive from './Recive';
 import Balance from './Balance';
 import Send from './Send';
@@ -15,7 +15,7 @@ class TransactionScreen extends Component {
    }
 
    componentDidMount() {
-      Icons.getImageSource('md-chatboxes', 30, 'orange').then((sources) => {
+      Icons.getImageSource('md-chatboxes', 30).then((sources) => {
          this.props.navigator.setButtons({
             rightButtons: [
                 { id: 'messages', icon: sources }

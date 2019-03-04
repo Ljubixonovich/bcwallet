@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 
+import HeadingText from '../../components/UI/HeadingText/HeadingText';
+import Btn from '../../components/UI/ButtonWithBackground/ButtonWithBackground';
+
 class LandingScreen extends Component {
    constructor(props) {
       super(props);
@@ -22,15 +25,32 @@ class LandingScreen extends Component {
 
    render() {
       return (
-         <View style={{flex: 1}}>
-            <Text style={{fontSize: 32, textAlign:'center'}}>Obsnetwork</Text>
-            <Button title='Create Wallet' onPress={this.createWalletHandler}/>
-            <Button title='Restore Wallet' onPress={this.restoreWalletHandler}/>
+         <View style={styles.mainContainer}>
+            <View>
+               <HeadingText>Obsnetwork</HeadingText>
+            </View>
+            <View style={styles.btnContainer}>
+               <Btn textColor='black' color='#0cb' 
+                  onPress={this.createWalletHandler}>Create Wallet</Btn>
+               <Btn textColor='black' color='#0cb' 
+                  onPress={this.restoreWalletHandler}>Restore Wallet</Btn>
+            </View>       
          </View>
       );
     }
-
 }
+
+const styles = StyleSheet.create({
+   mainContainer: {
+      flex: 1,
+      padding: 15,
+   },
+   btnContainer: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center'
+   }
+});
 
 
 export default LandingScreen;
