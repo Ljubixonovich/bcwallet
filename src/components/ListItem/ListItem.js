@@ -17,9 +17,13 @@ const styles = StyleSheet.create({
     width: '100%',
     padding: 10,
     marginBottom: 5,
-   // backgroundColor: '#eee',
     borderBottomWidth: 1,
-    borderBottomColor: '#bbb'
+    borderBottomColor: '#bbb',
+
+   // BOX-ALIKE style 
+   //  borderRightWidth: 2,
+   //  borderRightColor: '#bbb',
+   //  backgroundColor: '#eee',
   },
   image: {
     marginRight: 12,

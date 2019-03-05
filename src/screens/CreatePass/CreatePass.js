@@ -96,7 +96,7 @@ class CreatePassScreen extends Component {
                <View style={{ flex: 3 }}>
                   <View style={{ flex: 1 }}>
                      <HeadingText>Obsnetwork</HeadingText>
-                     <Text style={{ textAlign: 'center' }}>
+                     <Text style={{ textAlign: 'center', marginTop: 10 }}>
                         Please select a password to protect your wallet
                      </Text>
                   </View>
@@ -142,14 +142,14 @@ const styles = StyleSheet.create({
    },
    inputContainer: {
       flex: 2,
-      justifyContent: 'space-evenly',
+      justifyContent: 'flex-start',
       marginLeft: 40,
       marginRight: 40,
    },
    btnContainer: {
       flex: 2,
       flexDirection: 'row',
-      alignItems: 'center',
+      alignItems: 'flex-start',
       justifyContent: 'space-evenly',
    },
    input: {
