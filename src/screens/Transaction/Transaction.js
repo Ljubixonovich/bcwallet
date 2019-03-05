@@ -12,7 +12,11 @@ class TransactionScreen extends Component {
    constructor(props) {
       super(props);
       this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent);
-   }
+   } 
+   
+   static navigatorStyle = {
+      topBarElevationShadowEnabled: false,
+   };
 
    componentDidMount() {
       Icons.getImageSource('md-chatboxes', 30).then((sources) => {
@@ -20,7 +24,7 @@ class TransactionScreen extends Component {
             rightButtons: [
                 { id: 'messages', icon: sources }
             ]
-        });
+        });        
      });
    }
 
