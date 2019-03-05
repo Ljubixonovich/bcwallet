@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, StyleSheet, View, Switch, Button } from 'react-native';
+import { Text, StyleSheet, View, Switch } from 'react-native';
 
 import HeadingText from '../../components/UI/HeadingText/HeadingText';
 import Btn from '../../components/UI/ButtonWithBackground/ButtonWithBackground';
@@ -25,12 +25,12 @@ class CreatePhraseScreen extends Component {
    }
 
    render() {
-      let mockText = '';
+      let mockText = 'Lorem ipsum dolor sit amet, ne hinc delicatissimi usu, alia officiis vulputate ut mea. Tollit antiopam mediocritatem at eos. Et vim singulis laboramus consectetuer, cum eligendi assueverit at, no odio altera repudiandae mea. Id dictas liberavisse philosophia nec. Ei ferri alterum aliquam quo, ut mea alia salutandi.';
       return (
          <View style={styles.mainContainer}>
             <View style={{flex:1}}>
                <HeadingText>Obsnetwork</HeadingText>
-               <Text>
+               <Text style={{textAlign: 'center'}}>
                   Please write it down on a paper and keep it in a safe place
                </Text>
             </View>
@@ -38,7 +38,7 @@ class CreatePhraseScreen extends Component {
                <View style={{flex:1}}></View>
                <View style={{flex:3}}>
                   <Text>
-                  Lorem ipsum dolor sit amet, ne hinc delicatissimi usu, alia officiis vulputate ut mea. Tollit antiopam mediocritatem at eos. Et vim singulis laboramus consectetuer, cum eligendi assueverit at, no odio altera repudiandae mea. Id dictas liberavisse philosophia nec. Ei ferri alterum aliquam quo, ut mea alia salutandi.
+                     {mockText}
                   </Text>
                </View>
                <View style={{flex:1}}></View>

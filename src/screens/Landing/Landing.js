@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
 import HeadingText from '../../components/UI/HeadingText/HeadingText';
 import Btn from '../../components/UI/ButtonWithBackground/ButtonWithBackground';
