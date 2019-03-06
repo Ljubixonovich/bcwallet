@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, StyleSheet, View, KeyboardAvoidingView, Keyboard, TouchableWithoutFeedback } from 'react-native';
+import { Text, StyleSheet, View, KeyboardAvoidingView, Keyboard, Platform, TouchableWithoutFeedback } from 'react-native';
 
 import HeadingText from '../../components/UI/HeadingText/HeadingText';
 import Btn from '../../components/UI/ButtonWithBackground/ButtonWithBackground';
@@ -12,6 +12,12 @@ class RestoreWalletScreen extends Component {
    }
 
    nextHandler = () => {
+      this.setState(prevState => {
+         return {
+            ...prevState,
+            freshlyLoaded: false
+         };
+      });
       this.props.navigator.push({
          screen: 'bcwallet.TransactionScreen',
          title: 'Transactions',
@@ -20,6 +26,7 @@ class RestoreWalletScreen extends Component {
    }
 
    state = {
+      freshlyLoaded: true,
       controls: {
          recoveryPhrase: {
             value: '',
@@ -54,7 +61,7 @@ class RestoreWalletScreen extends Component {
    render() {
       return (
          <KeyboardAvoidingView style={styles.mainContainer}
-            behavior='padding'
+         behavior={Platform.OS === "ios" || this.state.freshlyLoaded ? "padding" : null}
          >
             <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
                <View style={{ flex: 5 }}>

@@ -4,9 +4,7 @@ react-native run-android
 
 
 TO DO:
-   fonts,
-            header 15.01 valuta
-   list (balance)
-            amount input (send, recive)
-   qr slika (recive)
+   recive finishiraj
    qr input (send)
+
+

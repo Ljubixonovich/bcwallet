@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, StyleSheet, View, KeyboardAvoidingView, Keyboard, TouchableWithoutFeedback } from 'react-native';
+import { Text, StyleSheet, View, KeyboardAvoidingView, Platform, Keyboard, TouchableWithoutFeedback } from 'react-native';
 
 import HeadingText from '../../components/UI/HeadingText/HeadingText';
 import Btn from '../../components/UI/ButtonWithBackground/ButtonWithBackground';
@@ -12,6 +12,7 @@ class CreatePassScreen extends Component {
    }
 
    state = {
+      freshlyLoaded: true,
       controls: {
          password: {
             value: '',
@@ -76,6 +77,12 @@ class CreatePassScreen extends Component {
    };
 
    skipHandler = () => {
+      this.setState(prevState => {
+         return {
+            ...prevState,
+            freshlyLoaded: false
+         };
+      });
       this.props.navigator.push({
          screen: 'bcwallet.TransactionScreen',
          title: 'Transactions'
@@ -83,6 +90,12 @@ class CreatePassScreen extends Component {
    }
 
    nextHandler = () => {
+      this.setState(prevState => {
+         return {
+            ...prevState,
+            freshlyLoaded: false
+         };
+      });
       this.props.navigator.push({
          screen: 'bcwallet.TransactionScreen',
          title: 'Transactions'
@@ -91,7 +104,9 @@ class CreatePassScreen extends Component {
 
    render() {
       return (
-         <KeyboardAvoidingView style={styles.mainContainer} behavior='padding'>
+         <KeyboardAvoidingView style={styles.mainContainer}
+            behavior={Platform.OS === "ios" || this.state.freshlyLoaded ? "padding" : null}
+         >
             <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
                <View style={{ flex: 3 }}>
                   <View style={{ flex: 1 }}>

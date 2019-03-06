@@ -9,13 +9,13 @@ import qrImage from '../../assets/images/qrCode.png';
 const recive = props => {
    const myAddress = 'Lorem ipsum dolor sit amet, ne hinc delicatissimi usu, alia officiis vulputate ut mea. Tollit antiopam mediocritatem at eos. ';
    return (
-      <KeyboardAvoidingView style={styles.mainContainer} behavior='padding'>
+      <KeyboardAvoidingView style={styles.mainContainer}>
          <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-            <View style={{ flex: 4 }}>
-               <View style={StyleSheet.headerContainer}>
+            <View style={{ flex: 3 }}>
+               {/* <View style={StyleSheet.headerContainer}>
                   <HeadingText>15.01</HeadingText>
                   <Text style={{ textAlign: 'center', paddingLeft: 50, fontSize: 18 }}>ZBS</Text>
-               </View>
+               </View> */}
                <View style={{ flex: 1, justifyContent: 'center' }}>
                   <Text style={{ fontWeight: 'bold' }}>My Address</Text>
                   <Text>{myAddress}</Text>
@@ -41,9 +41,7 @@ const styles = StyleSheet.create({
    mainContainer: {
       flex: 1, 
       padding: 15,
-   },
-   headerContainer: {
-      flex: 1,
+      justifyContent: 'flex-end'
    },
    inputContainer: {
       flex: 2, 
@@ -53,8 +51,8 @@ const styles = StyleSheet.create({
    },
    image: {
       marginTop: 30,
-      height: 200,
-      width: 200,
+      height: 180,
+      width: 180,
    },
    input: {
       backgroundColor: '#eee',
