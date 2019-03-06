@@ -10,7 +10,7 @@ class CreatePhraseScreen extends Component {
    }
 
    state = {
-      recoverySwitch: true
+      recoverySwitch: false
    }
 
    restoreWalletHandler = () => {

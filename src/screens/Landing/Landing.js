@@ -30,12 +30,14 @@ class LandingScreen extends Component {
             <View>
                <HeadingText>Obsnetwork</HeadingText>
             </View>
+            <View style={{flex:1}}></View>
             <View style={styles.btnContainer}>
-               <Btn textColor='black' color='#0cb' 
+               <Btn textColor='black' color='#0cb' width='50%'
                   onPress={this.createWalletHandler}>Create Wallet</Btn>
-               <Btn textColor='black' color='#0cb' 
+               <Btn textColor='black' color='#0cb'  width='50%'
                   onPress={this.restoreWalletHandler}>Restore Wallet</Btn>
-            </View>       
+            </View>  
+            <View style={{flex:2}}></View>     
          </View>
       );
     }
@@ -47,10 +49,10 @@ const styles = StyleSheet.create({
       padding: 15,
    },
    btnContainer: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center'
-   }
+      flex: 2,
+      justifyContent: 'space-evenly',
+      alignItems: 'center',    
+   },
 });
 
 

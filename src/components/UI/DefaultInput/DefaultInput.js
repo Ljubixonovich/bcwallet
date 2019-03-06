@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     width: '100%',
     borderWidth: 1,
     borderColor: '#eee',
-    padding: 5,
+    padding: 3,
     marginTop: 8,
     marginBottom: 8
   },

@@ -12,7 +12,9 @@ const buttonWithBackground = props => {
    const content = (
       <View style={[
          styles.button,
-         { backgroundColor: props.color },
+         { backgroundColor: props.color,
+            width: props.width 
+         },
          props.disabled ? styles.disabled : null
       ]}>
          <Text style={[
