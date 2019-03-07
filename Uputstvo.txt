@@ -2,9 +2,3 @@ export PATH="/home/ljubomir/Android/Sdk/platform-tools":$PATH
 
 react-native run-android
 
-
-TO DO:
-   recive finishiraj - kolapsing
-   qr input (send)
-
-
