@@ -59,7 +59,7 @@ class TransactionScreen extends Component {
             onChangeTab={(arg) => this.tabChangeHandler(arg.i)}
          >
             <View tabLabel='Send' style={{flex:1}}>
-               <Send />
+               <Send navigator={this.props.navigator} />
             </View>
            
             <View tabLabel='Balance' style={{flex:1}}>
