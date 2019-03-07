@@ -10,6 +10,7 @@ import com.facebook.soloader.SoLoader;
 
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.reactnativenavigation.NavigationApplication;
+import org.reactnative.camera.RNCameraPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -25,7 +26,7 @@ public class MainApplication extends NavigationApplication {
 //     @Override
 //     protected List<ReactPackage> getPackages() {
 //       return Arrays.<ReactPackage>asList(
-//           new MainReactPackage(),
+//           new MainReactPackage(),            
 //           new VectorIconsPackage()
 //       );
 //     }
@@ -58,7 +59,8 @@ public class MainApplication extends NavigationApplication {
 		// No need to add RnnPackage and MainReactPackage
 		return Arrays.<ReactPackage>asList(
 			// eg. new VectorIconsPackage()
-         new VectorIconsPackage()
+         new VectorIconsPackage(),
+         new RNCameraPackage()
 		);
 	}
 
