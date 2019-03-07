@@ -36,7 +36,7 @@ class MessagesScreen extends Component {
    ];
 
    onMessagePressed = (id, item) => {
-      alert('id: ' + id + ', message: ' + item);
+    //  alert('id: ' + id + ', message: ' + item);
    }
 
   render() {

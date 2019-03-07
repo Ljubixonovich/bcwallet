@@ -12,10 +12,6 @@ const recive = props => {
       <KeyboardAvoidingView style={styles.mainContainer}>
          <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
             <View style={{ flex: 3 }}>
-               {/* <View style={StyleSheet.headerContainer}>
-                  <HeadingText>15.01</HeadingText>
-                  <Text style={{ textAlign: 'center', paddingLeft: 50, fontSize: 18 }}>ZBS</Text>
-               </View> */}
                <View style={{ flex: 1, justifyContent: 'center' }}>
                   <Text style={{ fontWeight: 'bold' }}>My Address</Text>
                   <Text>{myAddress}</Text>
@@ -50,7 +46,7 @@ const styles = StyleSheet.create({
       justifyContent: 'space-between',
    },
    image: {
-      marginTop: 30,
+      marginTop: 42,
       height: 180,
       width: 180,
    },
