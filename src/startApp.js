@@ -1,18 +1,20 @@
 import { Navigation } from 'react-native-navigation';
 
+import { colors, constants } from './assets/index';
+
 const startApp = () => {
 
    Navigation.startSingleScreenApp({
       screen:
       {
          screen: 'bcwallet.LandingScreen',
-         label: 'Obsnetwork',
-         title: 'Obsnetwork'
+         label: constants.mainTitle,
+         title: constants.mainTitle
       },
       appStyle: {
          orientation: 'portrait',
          navBarTitleTextCentered: true,
-         navBarBackgroundColor: '#0cb',
+         navBarBackgroundColor: colors.red,
          navBarTextFontFamily: 'notoserif'
       }
    });  

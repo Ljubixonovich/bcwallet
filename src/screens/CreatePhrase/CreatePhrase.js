@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text, StyleSheet, View, Switch } from 'react-native';
 
+import { colors, constants } from '../../assets/index';
 import HeadingText from '../../components/UI/HeadingText/HeadingText';
 import Btn from '../../components/UI/ButtonWithBackground/ButtonWithBackground';
 
@@ -29,7 +30,7 @@ class CreatePhraseScreen extends Component {
       return (
          <View style={styles.mainContainer}>
             <View style={{flex:1}}>
-               <HeadingText>Obsnetwork</HeadingText>
+               <HeadingText>{constants.mainTitle}</HeadingText>
                <Text style={{textAlign: 'center'}}>
                   Please write it down on a paper and keep it in a safe place
                </Text>
@@ -48,7 +49,7 @@ class CreatePhraseScreen extends Component {
                <Text style={{marginLeft: 15}}>I have safely stored my recovery phrase</Text>
             </View>
             <View style={styles.btnContainer}>
-               <Btn textColor='black' color='#0cb' disabled={!this.state.recoverySwitch}  
+               <Btn textColor={colors.black} color={colors.red} disabled={!this.state.recoverySwitch}  
                   onPress={this.restoreWalletHandler}
                >Next</Btn>
             </View>     

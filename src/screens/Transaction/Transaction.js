@@ -6,6 +6,7 @@ import Icons from 'react-native-vector-icons/Ionicons';
 import Recive from './Recive';
 import Balance from './Balance';
 import Send from './Send';
+import { colors } from '../../assets/index';
 
 
 class TransactionScreen extends Component { 
@@ -54,7 +55,7 @@ class TransactionScreen extends Component {
 
          <ScrollableTabView
             initialPage={1} 
-            renderTabBar={() => <ScrollableTabBar style={{backgroundColor:'#0cb'}} />}
+            renderTabBar={() => <ScrollableTabBar style={{backgroundColor:colors.red}} />}
             prerenderingSiblingsNumber={Infinity}
             onChangeTab={(arg) => this.tabChangeHandler(arg.i)}
          >

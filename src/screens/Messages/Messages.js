@@ -15,22 +15,22 @@ class MessagesScreen extends Component {
    mockMessages = [
       {
          id: 1,
-         message: 'Aldrop received!',
+         message: 'Payment verified!',
          image: img1
       },
       {
          id: 2,
-         message: 'Network upgrade',
+         message: 'Available upgrades',
          image: img2
       },
       {
          id: 3,
-         message: 'Use our coins in another restaurant!',
+         message: 'Use coins in these restaurants!',
          image: img3
       },
       {
          id: 4,
-         message: 'Bla bla',
+         message: 'Some commercial' ,   
          image: img4
       }
    ];

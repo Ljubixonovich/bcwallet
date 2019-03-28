@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text, StyleSheet, View, KeyboardAvoidingView, Keyboard, Platform, TouchableWithoutFeedback } from 'react-native';
 
+import { colors, constants } from '../../assets/index';
 import HeadingText from '../../components/UI/HeadingText/HeadingText';
 import Btn from '../../components/UI/ButtonWithBackground/ButtonWithBackground';
 import DefaultInput from '../../components/UI/DefaultInput/DefaultInput';
@@ -66,7 +67,7 @@ class RestoreWalletScreen extends Component {
             <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
                <View style={{ flex: 5 }}>
                   <View style={styles.headerContainer}>
-                     <HeadingText>Obsnetwork</HeadingText>
+                     <HeadingText>{constants.mainTitle}</HeadingText>
                      <Text style={{ textAlign: 'center' }}>
                         Please type bellow your recovery phrase
                      </Text>
@@ -84,7 +85,7 @@ class RestoreWalletScreen extends Component {
                </View>
             </TouchableWithoutFeedback>
             <View style={styles.btnContainer}>
-               <Btn textColor='black' color='#0cb'
+               <Btn textColor={colors.black} color={colors.red}
                   onPress={this.nextHandler}
                >Next</Btn>
             </View>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text, StyleSheet, View, KeyboardAvoidingView, Platform, Keyboard, TouchableWithoutFeedback } from 'react-native';
 
+import { colors, constants } from '../../assets/index';
 import HeadingText from '../../components/UI/HeadingText/HeadingText';
 import Btn from '../../components/UI/ButtonWithBackground/ButtonWithBackground';
 import DefaultInput from '../../components/UI/DefaultInput/DefaultInput';
@@ -110,7 +111,7 @@ class CreatePassScreen extends Component {
             <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
                <View style={{ flex: 3 }}>
                   <View style={{ flex: 1 }}>
-                     <HeadingText>Obsnetwork</HeadingText>
+                     <HeadingText>{constants.mainTitle}</HeadingText>
                      <Text style={{ textAlign: 'center', marginTop: 10 }}>
                         Please select a password to protect your wallet
                      </Text>
@@ -135,10 +136,10 @@ class CreatePassScreen extends Component {
             </TouchableWithoutFeedback>
 
             <View style={styles.btnContainer}>
-               <Btn textColor='black' color='#0cb'
+               <Btn textColor={colors.black} color={colors.red}
                   onPress={this.skipHandler}
                >Skip</Btn>
-               <Btn textColor='black' color='#0cb'
+               <Btn textColor={colors.black} color={colors.red}
                   disabled={
                      !this.state.controls.password.valid ||
                      !this.state.controls.confirmPassword.valid}
