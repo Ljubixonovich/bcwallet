@@ -1,4 +1,4 @@
-rootProject.name = 'bcwallet'
+rootProject.name = 'mpwallet'
 
 include ':app'
 

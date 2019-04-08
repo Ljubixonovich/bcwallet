@@ -1,4 +1,4 @@
-package com.bcwallet;
+package com.mpwallet;
 
 import android.app.Application;
 

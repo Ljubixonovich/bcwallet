@@ -85,7 +85,7 @@ class CreatePassScreen extends Component {
          };
       });
       this.props.navigator.push({
-         screen: 'bcwallet.TransactionScreen',
+         screen: 'mpwallet.TransactionScreen',
          title: 'Transactions'
       });
    }
@@ -98,7 +98,7 @@ class CreatePassScreen extends Component {
          };
       });
       this.props.navigator.push({
-         screen: 'bcwallet.TransactionScreen',
+         screen: 'mpwallet.TransactionScreen',
          title: 'Transactions'
       });
    }

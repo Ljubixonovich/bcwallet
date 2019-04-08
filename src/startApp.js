@@ -7,7 +7,7 @@ const startApp = () => {
    Navigation.startSingleScreenApp({
       screen:
       {
-         screen: 'bcwallet.LandingScreen',
+         screen: 'mpwallet.LandingScreen',
          label: constants.mainTitle,
          title: constants.mainTitle
       },

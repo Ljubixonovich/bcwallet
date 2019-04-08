@@ -16,7 +16,7 @@ class CreatePhraseScreen extends Component {
 
    restoreWalletHandler = () => {
       this.props.navigator.push({
-         screen: 'bcwallet.CreatePassScreen',
+         screen: 'mpwallet.CreatePassScreen',
          title: 'Create Pass'
       });
    }

@@ -15,7 +15,7 @@ class send extends Component {
 
    qrScanHandler = () => {
       this.props.navigator.push({
-         screen: 'bcwallet.ScanScreen',
+         screen: 'mpwallet.ScanScreen',
          title: 'QR Code Scan'
       });
    }

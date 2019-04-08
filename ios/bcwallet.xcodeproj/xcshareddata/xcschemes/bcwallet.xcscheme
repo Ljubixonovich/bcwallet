@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "bcwallet.app"
-               BlueprintName = "bcwallet"
-               ReferencedContainer = "container:bcwallet.xcodeproj">
+               BuildableName = "mpwallet.app"
+               BlueprintName = "mpwallet"
+               ReferencedContainer = "container:mpwallet.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "bcwalletTests.xctest"
-               BlueprintName = "bcwalletTests"
-               ReferencedContainer = "container:bcwallet.xcodeproj">
+               BuildableName = "mpwalletTests.xctest"
+               BlueprintName = "mpwalletTests"
+               ReferencedContainer = "container:mpwallet.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -61,9 +61,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "bcwalletTests.xctest"
-               BlueprintName = "bcwalletTests"
-               ReferencedContainer = "container:bcwallet.xcodeproj">
+               BuildableName = "mpwalletTests.xctest"
+               BlueprintName = "mpwalletTests"
+               ReferencedContainer = "container:mpwallet.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -71,9 +71,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "bcwallet.app"
-            BlueprintName = "bcwallet"
-            ReferencedContainer = "container:bcwallet.xcodeproj">
+            BuildableName = "mpwallet.app"
+            BlueprintName = "mpwallet"
+            ReferencedContainer = "container:mpwallet.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "bcwallet.app"
-            BlueprintName = "bcwallet"
-            ReferencedContainer = "container:bcwallet.xcodeproj">
+            BuildableName = "mpwallet.app"
+            BlueprintName = "mpwallet"
+            ReferencedContainer = "container:mpwallet.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -113,9 +113,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "bcwallet.app"
-            BlueprintName = "bcwallet"
-            ReferencedContainer = "container:bcwallet.xcodeproj">
+            BuildableName = "mpwallet.app"
+            BlueprintName = "mpwallet"
+            ReferencedContainer = "container:mpwallet.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

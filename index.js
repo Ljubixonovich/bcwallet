@@ -13,4 +13,4 @@ const RNRedux = () => {
 }
 
 
-AppRegistry.registerComponent('bcwallet', () => RNRedux);
+AppRegistry.registerComponent('mpwallet', () => RNRedux);

@@ -33,7 +33,7 @@ class TransactionScreen extends Component {
       if (event.type == 'NavBarButtonPress') {
          if (event.id == 'messages') {
             this.props.navigator.push({
-               screen: 'bcwallet.MessagesScreen',
+               screen: 'mpwallet.MessagesScreen',
                title: 'Messages'
             });
          }

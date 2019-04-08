@@ -14,13 +14,13 @@ import startApp from './src/startApp';
 
 const store = configureStore();
 
-Navigation.registerComponent('bcwallet.LandingScreen', () => LandingScreen, store, Provider);
-Navigation.registerComponent('bcwallet.CreatePhraseScreen', () => CreatePhraseScreen, store, Provider);
-Navigation.registerComponent('bcwallet.CreatePassScreen', () => CreatePassScreen, store, Provider);
-Navigation.registerComponent('bcwallet.RestoreWalletScreen', () => RestoreWalletScreen, store, Provider);
-Navigation.registerComponent('bcwallet.TransactionScreen', () => TransactionScreen, store, Provider);
-Navigation.registerComponent('bcwallet.MessagesScreen', () => MessagesScreen, store, Provider);
-Navigation.registerComponent('bcwallet.ScanScreen', () => ScanScreen, store, Provider);
+Navigation.registerComponent('mpwallet.LandingScreen', () => LandingScreen, store, Provider);
+Navigation.registerComponent('mpwallet.CreatePhraseScreen', () => CreatePhraseScreen, store, Provider);
+Navigation.registerComponent('mpwallet.CreatePassScreen', () => CreatePassScreen, store, Provider);
+Navigation.registerComponent('mpwallet.RestoreWalletScreen', () => RestoreWalletScreen, store, Provider);
+Navigation.registerComponent('mpwallet.TransactionScreen', () => TransactionScreen, store, Provider);
+Navigation.registerComponent('mpwallet.MessagesScreen', () => MessagesScreen, store, Provider);
+Navigation.registerComponent('mpwallet.ScanScreen', () => ScanScreen, store, Provider);
 
 
 startApp();

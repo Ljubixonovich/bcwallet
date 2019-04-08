@@ -13,7 +13,7 @@ class LandingScreen extends Component {
 
    createWalletHandler = () => {
       this.props.navigator.push({
-         screen: 'bcwallet.CreatePhraseScreen',
+         screen: 'mpwallet.CreatePhraseScreen',
          title: 'Create Phrase',
        //  animationType: 'slide-up'
       });
@@ -21,7 +21,7 @@ class LandingScreen extends Component {
 
    restoreWalletHandler = () => {
       this.props.navigator.push({
-         screen: 'bcwallet.RestoreWalletScreen',
+         screen: 'mpwallet.RestoreWalletScreen',
          title: 'Restore Wallet',
       });
    }

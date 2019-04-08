@@ -20,7 +20,7 @@ class RestoreWalletScreen extends Component {
          };
       });
       this.props.navigator.push({
-         screen: 'bcwallet.TransactionScreen',
+         screen: 'mpwallet.TransactionScreen',
          title: 'Transactions',
          // backButtonHidden: true
       });
